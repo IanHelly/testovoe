@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+ul {
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+.employee-name:hover {
+    background-color: #c2c2c4;
+}
+
+strong {
+    color: #333;
+}
+
+em {
+    font-style: italic;
+    color: #777;
+}
+
+small {
+    font-size: 0.8em;
+    color: #555;
+}
+
+.subordinates {
+    margin-left: 20px;
+    display: none; /* Скрыть подчинённых по умолчанию */
+}
+
+.employee-name {
+    cursor: pointer;
+    color: #007bff;
+}
+
+.employee-name:hover {
+    text-decoration: underline;
+}

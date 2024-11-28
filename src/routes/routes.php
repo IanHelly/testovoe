@@ -36,12 +36,7 @@ switch ($parsedUrl['path']) {
 
     case '/seeder':
         $seederController = new SeederController();
-        if ($method === 'POST') {
-            $seederController->runSeeder();
-        } else {
-            http_response_code(405);
-            echo json_encode(['error' => 'Method not allowed for this endpoint']);
-        }
+        $seederController->runSeeder();
         break;
 
 

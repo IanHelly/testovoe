@@ -1,9 +1,10 @@
 <?php
 
-require_once __DIR__ . '/../core/Database/Database.php';
-require_once __DIR__ . '/../../vendor/autoload.php';
+namespace App\Seeders;
 
+use App\Core\Database\Database;
 use Faker\Factory;
+use PDO;
 
 class EmployeeSeeder
 {

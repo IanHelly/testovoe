@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const xhr = new XMLHttpRequest();
         xhr.open('POST', '/employees', true);
+        xhr.setRequestHeader('X-CSRF-TOKEN', window.csrfToken);
         xhr.onload = function () {
             if (xhr.status === 200) {
                 fetchEmployees();
@@ -103,6 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const xhr = new XMLHttpRequest();
             xhr.open('DELETE', '/employees?id=' + id, true);
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.setRequestHeader('X-CSRF-TOKEN', window.csrfToken);
             xhr.onload = function () {
                 if (xhr.status === 200) {
                     fetchEmployees();

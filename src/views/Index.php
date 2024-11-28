@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
+<script>
+    window.csrfToken = '<?php echo $csrf; ?>';
+</script>
 <div class="container">
     <h1>Employee Management System</h1>
 
@@ -71,7 +74,6 @@
             <ul id="subordinatesList"></ul>
         </div>
     </div>
-
     <script src="/assets/js/app.js"></script>
 </div>
 </body>

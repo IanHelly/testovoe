@@ -1,5 +1,14 @@
 {
     "require": {
         "fakerphp/faker": "^1.24"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\Controllers\\": "src/controllers/",
+            "App\\Core\\": "src/core/",
+            "App\\Middleware\\": "src/middleware/",
+            "App\\Models\\": "src/models/",
+            "App\\Seeders\\": "src/seeders/"
+        }
     }
 }

@@ -1,17 +1,13 @@
 <?php
 
-require_once __DIR__ . '/../controllers/IndexController.php';
-require_once __DIR__ . '/../controllers/EmployeeController.php';
-require_once __DIR__ . '/../controllers/TreeController.php';
-require_once __DIR__ . '/../controllers/SeederController.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
+
+use App\Controllers\IndexController;
+use App\Controllers\EmployeeController;
+use App\Controllers\TreeController;
+use App\Controllers\SeederController;
 
 $method = $_SERVER['REQUEST_METHOD'];
-
-$indexController = new IndexController();
-$employeeController = new EmployeeController();
-$treeController = new TreeController();
-$seederController = new SeederController();
-
 $requestUri = $_SERVER['REQUEST_URI'];
 
 $parsedUrl = parse_url($requestUri);
@@ -19,15 +15,18 @@ parse_str($parsedUrl['query'] ?? '', $queryParams);
 
 switch ($parsedUrl['path']) {
     case '/':
+        $indexController = new IndexController();
         $indexController->Index();
         break;
 
     case '/employees':
+        $employeeController = new EmployeeController();
         $employeeController->handleRequest($method, $_POST, $queryParams);
         break;
 
     case '/tree':
         if ($method === 'GET') {
+            $treeController = new TreeController();
             $treeController->handleRequest();
         } else {
             http_response_code(405);

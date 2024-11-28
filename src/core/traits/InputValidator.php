@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Core\Traits;
+
 trait InputValidator {
 
     private function sanitizeInputData(array $data): array

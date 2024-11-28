@@ -1,6 +1,9 @@
 <?php
 
-require_once __DIR__ . '/../core/Database/Database.php';
+namespace App\Models;
+
+use App\Core\Database\Database;
+use PDO;
 
 class EmployeeModel
 {
@@ -13,7 +16,7 @@ class EmployeeModel
 
     public function getAll(): array
     {
-        $stmt = $this->db->query("SELECT * FROM employees ORDER BY id DESC LIMIT 10");
+        $stmt = $this->db->query("SELECT * FROM employees ORDER BY id DESC LIMIT 100");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 

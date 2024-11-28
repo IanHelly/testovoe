@@ -1,12 +1,13 @@
 <?php
 
-require_once __DIR__ . '/../seeders/EmployeeSeeder.php';
+namespace App\Controllers;
+
+use App\Seeders\EmployeeSeeder;
 
 class SeederController
 {
     public function runSeeder(): void
     {
-        // Проверяем окружение (например, запускаем только на локальной машине)
         if ($_SERVER['SERVER_NAME'] !== 'localhost') {
             http_response_code(403);
             echo json_encode(['error' => 'Seeder can only be run in local environment']);

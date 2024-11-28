@@ -1,9 +1,11 @@
 <?php
 
-require_once __DIR__ . '/../models/EmployeeModel.php';
-require_once __DIR__ . '/../core/traits/InputValidator.php';
+namespace App\Controllers;
 
-class EmployeeController
+use App\Core\Traits\InputValidator;
+use App\Models\EmployeeModel;
+
+class EmployeeController extends BaseController
 {
     use InputValidator;
 
@@ -11,6 +13,7 @@ class EmployeeController
 
     public function __construct()
     {
+        parent::__construct();
         $this->model = new EmployeeModel();
     }
 

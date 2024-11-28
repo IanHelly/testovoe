@@ -1,6 +1,8 @@
 <?php
 
-require_once __DIR__ . '/../models/EmployeeModel.php';
+namespace App\Controllers;
+
+use App\Models\EmployeeModel;
 
 class TreeController
 {

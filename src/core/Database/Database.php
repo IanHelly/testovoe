@@ -17,10 +17,12 @@ class Database
 
     private function __construct()
     {
-        $host = 'localhost';
-        $dbname = 'testmax';
-        $username = 'root';
-        $password = 'root';
+        $host = $_ENV['DB_HOST'];
+        $dbname = $_ENV['DB_NAME'];
+        $username = $_ENV['DB_USER'];
+        $password = $_ENV['DB_PASSWORD'];
+
+        var_dump($host);
 
         try {
             $this->connection = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);

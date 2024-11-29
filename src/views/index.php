@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Management</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo $_ENV["ASSETS_ROOT"]?>/assets/css/style.css">
 </head>
 <body>
 <script>
@@ -74,7 +74,7 @@
             <ul id="subordinatesList"></ul>
         </div>
     </div>
-    <script src="/assets/js/app.js"></script>
+    <script src="<?php echo $_ENV["ASSETS_ROOT"]?>/assets/js/app.js"></script>
 </div>
 </body>
 </html>

@@ -6,7 +6,7 @@
     <title>Дерево сотрудников</title>
 
     <!-- Подключаем CSS стили из папки assets/css -->
-    <link rel="stylesheet" href="/assets/css/tree.css">
+    <link rel="stylesheet" href="<?php echo $_ENV["ASSETS_ROOT"]?>/assets/css/tree.css">
 
 </head>
 <body>
@@ -17,7 +17,7 @@
 </div>
 
 <!-- Подключаем JS скрипт из папки assets/js -->
-<script src="/assets/js/tree.js"></script>
+<script src="<?php echo $_ENV["ASSETS_ROOT"]?>/assets/js/tree.js"></script>
 
 </body>
 </html>

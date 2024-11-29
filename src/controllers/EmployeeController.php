@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Core\Traits\InputValidator;
+use App\Core\traits\InputValidator;
 use App\Models\EmployeeModel;
 
 class EmployeeController extends BaseController
